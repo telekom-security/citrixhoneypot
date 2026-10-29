@@ -5,4 +5,5 @@ RUN mkdir /CitrixHoneypot/logs
 RUN mkdir /CitrixHoneypot/ssl
 COPY ./. /CitrixHoneypot
 WORKDIR /CitrixHoneypot
+RUN python -m pip install --no-cache-dir -r requirements.txt
 CMD [ "python", "./CitrixHoneypot.py"]
